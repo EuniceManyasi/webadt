@@ -241,4 +241,10 @@ class SyncUser
     {
         return $this->profileId;
     }
+	
+	/**
+     * @OneToOne(targetEntity="Users" inversedBy="sync_user")
+     * @JoinColumn(name="id", referencedColumnName="id")
+     **/
+     private $user;
 }

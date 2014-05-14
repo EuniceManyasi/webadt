@@ -571,4 +571,10 @@ class Facilities
     {
         return $this->map;
     }
+	
+	/**
+     * @OneToOne(targetEntity="Users" inversedBy="facilities")
+     * @JoinColumn(name="facilitycode", referencedColumnName="id")
+     **/
+     private $user;
 }

@@ -421,4 +421,64 @@ class Users
     {
         return $this->cccStoreSp;
     }
+	
+	 /**
+     * @OneToOne(targetEntity="AccessLevel" mappedBy="user")
+     
+     **/
+	
+	private $access;
+	
+	 /**
+     * @OneToOne(targetEntity="Users")
+     * @JoinColumn(name="id", referencedColumnName="id")
+     **/
+     
+     private $users;
+	 
+	 /**
+     * @OneToOne(targetEntity="Menu" mappedBy="user")
+          **/
+     private $menu;
+	 
+	 /**
+     * @OneToOne(targetEntity="Facilities" mappedBy="user")
+    
+     **/
+     private $facilities;
+	 
+	 /**
+     * @OneToOne(targetEntity="SyncUser" mappedBy="user")
+    
+     **/
+     private $sync_user;
+	 
+	 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	 
 }

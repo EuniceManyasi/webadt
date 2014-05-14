@@ -121,4 +121,10 @@ class AccessLevel
     {
         return $this->indicator;
     }
+	
+	/**
+     * @OneToOne(targetEntity="Users" inversedBy="access")
+     * @JoinColumn(name="id", referencedColumnName="id")
+     **/
+     private $user;
 }

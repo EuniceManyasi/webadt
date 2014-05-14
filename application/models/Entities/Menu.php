@@ -181,4 +181,10 @@ class Menu
     {
         return $this->active;
     }
+	
+	/**
+     * @OneToOne(targetEntity="Users" inversedBy="menu")
+     * @JoinColumn(name="id", referencedColumnName="id")
+     **/
+     private $user;
 }
